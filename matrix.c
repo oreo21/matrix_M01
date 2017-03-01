@@ -48,7 +48,7 @@ multiply each element of m by x
 void scalar_mult(double x, struct matrix *m) {
   int i, j;
   for(i = 0; i < (*m).rows; i++){
-    for (j = 0; j < (*m).rows; j++){
+    for (j = 0; j < (*m).cols; j++){
       (*m).m[i][j] *= x;
     }
   }
@@ -162,6 +162,7 @@ void copy_matrix(struct matrix *a, struct matrix *b) {
       b->m[r][c] = a->m[r][c];  
 }
 
+/*
 int main(){
 
   struct matrix *a, *b;
@@ -177,3 +178,4 @@ int main(){
   
   return 0;
 }
+*/
